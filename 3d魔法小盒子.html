@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes rotate{
+            0%{
+                transform:rotateX(0deg) rotateY(0deg);
+            }
+            30%{
+                transform:rotateX(180deg) rotateY(180deg);
+            }
+            60%{
+                transform:rotateX(270deg) rotateY(270deg);
+            }
+            100%{
+                transform:rotateX(360deg) rotateY(360deg);
+            }
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            transition: all 1s;
+            opacity: 1;
+
+            transform-style: preserve-3d;
+            /*animation:rotate 20s infinite linear;*/
+        }
+
+        .sun{
+            width: 100%;
+            height: 100%;
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            transition: transform 1s ease-in;
+
+        }
+        .sun:nth-child(1){
+            background-color: whitesmoke;
+            transform: rotateY(0deg) translateZ(100px);
+        }
+        .sun:nth-child(2){
+            background-color: whitesmoke;
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        .sun:nth-child(3){
+            background-color: whitesmoke;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .sun:nth-child(4){
+            background-color: whitesmoke;
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .sun:nth-child(5){
+            background-color: whitesmoke;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .sun:nth-child(6){
+            background-color: whitesmoke;
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .box:hover{
+            transform: rotateX(630deg) rotateY(630deg);
+        }
+
+        ul{
+            width: 200px;
+            height: 200px;
+            background-color: whitesmoke;
+            list-style: none;
+            border: 1px solid gray;
+            float: left;
+            border-radius: 25px;
+            display: flex;
+
+        }
+        li{
+            width: 45px;
+            height: 45px;
+            margin: 10px;
+            background-color: blue;
+            border-radius: 50%;
+        }
+        ul:nth-child(1){
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        ul:nth-child(1) li:nth-child(1) {
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            background-color: red;
+        }
+        ul:nth-child(2){
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul:nth-child(3){
+            justify-content: space-between;
+        }
+        ul:nth-child(3) li:nth-child(2){
+            align-self: center;
+        }
+        ul:nth-child(3) li:nth-child(3){
+            align-self: flex-end;
+        }
+        ul:nth-child(4){
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        ul:nth-child(4) li{
+            margin: 25px;
+        }
+
+        ul:nth-child(5){
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        ul:nth-child(5) li{
+            margin: 10px 25px;
+        }
+        ul:nth-child(5) li:nth-child(3){
+            margin: 10px 75px;
+        }
+        ul:nth-child(6){
+
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+
+        }
+        ul:nth-child(6) li{
+            margin: 10px 25px;
+        }
+
+        .animation{
+            animation:rotate 1s 1s linear infinite;
+        }
+
+        .paused{
+            animation-play-state: paused;
+        }
+
+
+
+
+    </style>
+
+</head>
+<body>
+<div class="box">
+
+        <ul class="sun">
+            <li></li>
+        </ul>
+
+
+        <ul class="sun">
+            <li></li>
+            <li></li>
+        </ul>
+
+
+        <ul class="sun">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+
+        <ul  class="sun">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+
+        <ul class="sun">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+
+        <ul  class="sun">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+</div>
+<div class="box">
+
+    <ul class="sun">
+        <li></li>
+    </ul>
+
+
+    <ul class="sun">
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    <ul class="sun">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    <ul  class="sun">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    <ul class="sun">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    <ul  class="sun">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</div>
+<div class="box">
+
+    <ul class="sun">
+        <li></li>
+    </ul>
+
+
+    <ul class="sun">
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    <ul class="sun">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    <ul  class="sun">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    <ul class="sun">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    <ul  class="sun">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</div>
+<input type="button" value="让他转"/>
+<input type="button" value="让他转转"/>
+<input type="button" value="让他停"/>
+
+<input type="range" value=0 id='range'>
+<output id='output'></output>
+</body>
+<script>
+
+
+    document.querySelector("input[value=让他转]").onclick=function(){
+    var X=parseInt(Math.random()*10);
+    var Y=parseInt(Math.random()*10);
+    var Z=parseInt(Math.random()*10);
+
+    X=90*X;
+    Y=90*Y;
+    Z=90*Z;
+
+    document.querySelectorAll("div")[0].style.transform = "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)";
+
+    };
+
+
+
+</script>
+<script>
+         var divs=document.querySelectorAll("div");
+        document.querySelector("#range").oninput=function() {
+            var X = parseInt(this.value / 100 * 360);
+            var Y = parseInt(this.value / 100 * 360);
+            var Z = parseInt(this.value / 100 * 360);
+            X=90*X;
+            Y=90*Y;
+            Z=90*Z;
+
+
+            divs[1].style.transform = "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)";
+
+
+
+
+            output.innerHTML = deg;
+        }
+</script>
+<script>
+    document.querySelector("input[value=让他转转]").onclick=function() {
+        document.querySelectorAll("div")[2].classList.add("animation");
+    }
+
+    document.querySelector("input[value=让他停]").onclick=function(){
+        document.querySelectorAll("div")[2].classList.toggle("animation");
+    };
+
+</script>
+</html>
